@@ -284,7 +284,7 @@ tapply(dat$cw, dat$anyACE_T, sum)
 df0 <-  dat %>%  filter(training.sample == 1)
 #options "fit"(2) "CT"(1) "TOT"(3)
 ###Causal Trees (CT)
-set.seed(0203)
+set.seed(0204)
 tree_causal <- with(df0, causalTree(y ~ .,
                                     data = cbind(y, ACE.E),
                                     treatment = anyACE_T,
@@ -323,7 +323,7 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     clip.right.labs = FALSE, # full right split labels
     extra = 101, # show nbr of obs and percentages (see Figure 3)
     under = TRUE, # position extra info _under_ the boxes
-    under.cex = 1.2, # size of text under the boxes (default is .8)
+    under.cex = 1.0, # size of text under the boxes (default is .8)
     fallen.leaves = TRUE, # put leaves at the bottom of plot
     box.palette = "GnYlRd", # color of the boxes
     branch = .8, # branch lines with narrow shoulders and down slopes
@@ -339,13 +339,13 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
 ) 
 png(
   paste0("./Regression Tree Output/", out, "/tree.plot.causal", i, "_Study 3.png"),
-  width = 480 * 10, heigh = 480 * 11, res = 500)
+  width = 480 * 6, heigh = 480 * 4, res = 500)
 #rpart.plot(ptree_causal, roundint = FALSE)
 prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     clip.right.labs = FALSE, # full right split labels
     extra = 101, # show nbr of obs and percentages (see Figure 3)
     under = TRUE, # position extra info _under_ the boxes
-    under.cex = 1.2, # size of text under the boxes (default is .8)
+    under.cex = 1.0, # size of text under the boxes (default is .8)
     fallen.leaves = TRUE, # put leaves at the bottom of plot
     box.palette = "GnYlRd", # color of the boxes
     branch = .8, # branch lines with narrow shoulders and down slopes
