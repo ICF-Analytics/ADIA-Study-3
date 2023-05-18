@@ -256,13 +256,13 @@ df0 <-  dat %>%  filter(training.sample == 1)
 
 ###Causal Trees (CT)
 #followed protocol to first try "CT" then "fit" then "TOT"
-set.seed(0203)
+set.seed(0204)
 tree_causal <- with(df0, causalTree(y ~ .,
                                     data = cbind(y, ACE.E),
                                     treatment = anyACE_T,
                                     weights = cw,
-                                    split.Rule = "fit",
-                                    cv.option  = "fit",
+                                    split.Rule = "TOT",
+                                    cv.option  = "TOT",
                                     split.Honest = FALSE,
                                     cv.Honest = FALSE
 )
