@@ -171,7 +171,7 @@ rpart.plot(ptree.cond, roundint = FALSE)
 
 
 png(
-  paste0("./Regression Tree Output/", out, "/tree.plot.unconditional.", i, "_Study 3.png"),
+  paste0("./Regression Tree Output/", out, "/tree.plot.conditional.", i, "_Study 3.png"),
   width = 480 * 6, heigh = 480 * 4, res = 500)
 rpart.plot(ptree.cond, roundint = FALSE)
 dev.off()
@@ -286,13 +286,13 @@ df0 <-  dat %>%  filter(training.sample == 1)
 
 ###Causal Trees (CT)
 #followed protocol to first try "CT" then "fit" then "TOT"
-set.seed(0203)
+set.seed(0204)
 tree_causal <- with(df0, causalTree(y ~ .,
                                     data = cbind(y, ACE.E),
                                     treatment = anyACE_T,
                                     weights = cw,
-                                    split.Rule = "fit",
-                                    cv.option  = "fit",
+                                    split.Rule = "CT",
+                                    cv.option  = "CT",
                                     split.Honest = FALSE,
                                     cv.Honest = FALSE
 )
@@ -336,12 +336,12 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     branch.col = "gray", # color of branch lines
     branch.lwd = 2, # line width of branch lines
     roundint=FALSE, 
-    cex = 0.7,
+    cex = 0.8,
     split.fun = split.fun
 ) 
 png(
   paste0("./Regression Tree Output/", out, "/tree.plot.causal", i, "_Study 3.png"),
-  width = 480 * 8, heigh = 480 * 9, res = 500)
+  width = 480 * 6, heigh = 480 * 4, res = 500)
 #rpart.plot(ptree_causal, roundint = FALSE)
 prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     clip.right.labs = FALSE, # full right split labels
@@ -359,7 +359,7 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     branch.col = "gray", # color of branch lines
     branch.lwd = 2, # line width of branch lines
     roundint=FALSE,    
-    cex = 0.7,
+    cex = 0.8,
     split.fun = split.fun
 ) 
 dev.off()
