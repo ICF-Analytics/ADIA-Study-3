@@ -275,13 +275,13 @@ df0 <-  dat %>%  filter(training.sample == 1)
 
 ###Causal Trees (CT)
 #followed protocol to first try "CT" then "fit" then "TOT"
-set.seed(0203)
+set.seed(0204)
 tree_causal <- with(df0, causalTree(y ~ .,
                                     data = cbind(y, ACE.E),
                                     treatment = anyACE_T,
                                     weights = cw,
-                                    split.Rule = "fit",
-                                    cv.option  = "fit",
+                                    split.Rule = "CT",
+                                    cv.option  = "CT",
                                     split.Honest = FALSE,
                                     cv.Honest = FALSE
 )
@@ -292,6 +292,23 @@ tree_causal$cptable
 opcp <- tree_causal$cptable[, 1][which.min(tree_causal$cptable[, 4])]
 ptree_causal <- prune(tree_causal, cp = opcp)
 #rpart.plot(ptree_causal, roundint = FALSE)
+split.fun <- function(x, labs, digits, varlen, faclen)  # YK added for manual edits the splits labels (4/5/2023)
+{
+  labs <- gsub("loveaff < 0.5",  "Lack of parental \nlove and affection = No", labs)
+  labs <- gsub("loveaff >= 0.5", "Lack of parental \nlove and affection = Yes", labs)
+  labs <- gsub("mphysab < 0.5",  "Mother’s ACE- \nPhysical abuse = No", labs)
+  labs <- gsub("mphysab >= 0.5", "Mother’s ACE- \nPhysical abuse = Yes", labs)
+  labs <- gsub("commstr < 0.5",  "Community \nstressors = No", labs)
+  labs <- gsub("commstr >= 0.5", "Community \nstressors = Yes", labs)
+  labs <- gsub("msubstu < 0.5",  "Mother's ACE- HH members \nwith substance use \nproblems = No", labs)
+  labs <- gsub("msubstu >= 0.5", "Mother's ACE- HH members \nwith substance use \nproblems = Yes", labs)
+  labs <- gsub("bneedin < 0.5",  "Basic needs \ninstability = No", labs)
+  labs <- gsub("bneedin >= 0.5", "Basic needs \ninstability = Yes", labs)
+  labs <- gsub("ecstand < 0.5",  "Economic \nstanding = No", labs)
+  labs <- gsub("ecstand >= 0.5", "Economic \nstanding = Yes", labs)
+  labs <- gsub("mloveaf < 0.5",  "Mother’s ACE- Lack of \nparental love and affection \n= No \n ", labs)
+  labs <- gsub("mloveaf >= 0.5", "Mother’s ACE- Lack of \nparental love and affection \n= Yes \n ", labs)
+}
 prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     clip.right.labs = FALSE, # full right split labels
     extra = 101, # show nbr of obs and percentages (see Figure 3)
@@ -306,10 +323,13 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     cex.main = 1.5, # use big text for main title
     branch.col = "gray", # color of branch lines
     branch.lwd = 2, # line width of branch lines
-    roundint=FALSE) 
+    roundint=FALSE, 
+    cex = 0.8,
+    split.fun = split.fun
+) 
 png(
   paste0("./Regression Tree Output/", out, "/tree.plot.causal", i, "_Study 3.png"),
-  width = 480 * 6, heigh = 480 * 4, res = 500)
+  width = 480 * 6, heigh = 480 * 6, res = 500)
 #rpart.plot(ptree_causal, roundint = FALSE)
 prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     clip.right.labs = FALSE, # full right split labels
@@ -325,7 +345,10 @@ prp(ptree_causal, type = 4, # left and right split labels (see Figure 2)
     cex.main = 1.5, # use big text for main title
     branch.col = "gray", # color of branch lines
     branch.lwd = 2, # line width of branch lines
-    roundint=FALSE) 
+    roundint=FALSE,     
+    cex = 0.8,
+    split.fun = split.fun
+) 
 dev.off()
 #adding node labels
 rules <- partykit:::.list.rules.party(as.party(ptree_causal))
