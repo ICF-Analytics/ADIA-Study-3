@@ -181,6 +181,7 @@ contrasts(dat$ace_ocs) <- MASS::ginv(t(mat))
 
 ###declare design
 sdw    <- svydesign(id = ~ id, weights = ~ new_w, data = dat)
+table(dat$ace_ocs)
 
 #-------------------------------------------------------------------
 ###c.1.-  basic fit
@@ -263,12 +264,11 @@ pred_dr <- predict(fit_dr,
                                         othrace = 0,
                                         mhighgd_bin = 0,
                                         rural = 0,
-                                        mixur = 0,
+                                        mixur = 0
                                         #mhhinco = mean(dat$mhhinco, na.rm = TRUE) remove income as covariate
-                                        #,
+                   ),
                                         type = c("response")
                    )
-)
 
 data.frame(Group = grp, pred_dr, confint(pred_dr))
 
