@@ -193,9 +193,9 @@ tb <- tb %>%
 tb %>%
   gt %>%
   tab_header(title = "Predicted values") %>%
-  tab_footnote(footnote = paste0("P-value=", round(test.cau$p, digits = 6)
+  #tab_footnote(footnote = paste0("P-value=", round(test.cau$p, digits = 6)
                                  #, "; df=", test.cau$df, "; denominator df=", test.cau$ddf
-  ),  cells_stubhead()) %>% # added to save p-value 
+  #),  cells_stubhead()) %>% # added to save p-value 
   gtsave(paste0("./Regression Tree Output/", out, "/predicted_cau", out, i, "_Study 3.html"))
 
 #to find sample size
