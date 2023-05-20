@@ -62,11 +62,11 @@ tb <- tb[ , c(1, 6, 2:5)]
 tb %>%
   gt %>%
   tab_header(title = "Predicted values") %>%
-  tab_footnote(footnote = paste0("P-value=", round(test.cls$p, digits = 6)
+  #tab_footnote(footnote = paste0("P-value=", round(test.cls$p, digits = 6)
                                  #, "; df=", test.cls$df
                                  #, "; denominator df=", test.cls$ddf
-               ),  
-               cells_stubhead()) %>% # added to save p-value 
+  #             ),  
+  #             cells_stubhead()) %>% # added to save p-value 
   tab_header(title = "Predicted values") %>%
   fmt_number(
     columns = 3:6,
@@ -186,9 +186,9 @@ tb <- tb %>%
 tb %>%
   gt %>%
   tab_header(title = "Predicted values") %>%
-  tab_footnote(footnote = paste0("P-value=", round(test.cau$p, digits = 6)
+  #tab_footnote(footnote = paste0("P-value=", round(test.cau$p, digits = 6)
                                  #, "; df=", test.cau$df, "; denominator df=", test.cau$ddf
-              ),  cells_stubhead()) %>% # added to save p-value 
+  #            ),  cells_stubhead()) %>% # added to save p-value 
   fmt_number(
     columns = 3:5,
     rows = everything(),
