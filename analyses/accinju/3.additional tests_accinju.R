@@ -209,12 +209,16 @@ data.frame(Contrast = tests,
 pred0 <- predict(fit0, newdata = data.frame(ace_ocs = grp),type = c("response"))
 cbind(pred0, confint(pred0))
 
+freq <- data.frame(table(dat$ace_ocs)) %>% rename(Group = Var1, N = Freq)
+
+
 #saving the output in nice format
-data.frame(Group = grp, pred0, confint(pred0)) %>%
+left_join(freq, data.frame(Group = grp, pred0, confint(pred0)), by = "Group") %>%
+  rename(Estimate = response) %>%
   gt %>%
   tab_header(title = "Predicted values") %>%
   fmt_number(
-    columns = 2:5,
+    columns = 3:6,
     rows = everything(),
     decimals = 3,
     use_seps = FALSE
@@ -273,11 +277,12 @@ pred_dr <- predict(fit_dr,
 data.frame(Group = grp, pred_dr, confint(pred_dr))
 
 #saving the output in nice format
-data.frame(Group = grp, pred_dr, confint(pred_dr)) %>%
+left_join(freq, data.frame(Group = grp, pred_dr, confint(pred_dr)), by = "Group") %>%
+  rename(Estimate = response) %>%
   gt %>%
   tab_header(title = "Predicted values (Doubly robust)") %>%
   fmt_number(
-    columns = 2:5,
+    columns = 3:6,
     rows = everything(),
     decimals = 3,
     use_seps = FALSE
