@@ -10,9 +10,9 @@ options(scipen = 10^3)
 
 i   <- 'discrim_reason'
 out <- 'preshlth'
-setwd("C:/Users/54137/ICF/CDC ADIA Project - ICF Private Channel - ICF Private Channel/Study 1+3/Study 3/04_Analysis/") 
+#setwd("C:/Users/54137/ICF/CDC ADIA Project - ICF Private Channel - ICF Private Channel/Study 1+3/Study 3/04_Analysis/") 
 
-file_name <- paste0("./01_Data for Analysis/NLS.tree_", out, ".Rds")
+file_name <- paste0("Discrimination for any reason/data/NLS.tree_", out, ".Rds")
 dat <- readRDS(file_name)
 dim(dat)
 
@@ -82,7 +82,7 @@ crosstable(dat, c(ace_ocs), by=mhighgd_bin)
 #Entropy Balancing, #Reference: #https://web.stanford.edu/~jhain/Paper/eb.pdf
 #Entropy Balancing
 #Reference: #https://web.stanford.edu/~jhain/Paper/eb.pdf
-source("./02_R Scripts/ebw.r")
+source("R/ebw.r")
 
 # the matrix of covariates C was already created in step 1
 # the following code can be skipped if no modifications are requiered
@@ -212,6 +212,9 @@ contrasts(dat$ace_ocs) <- MASS::ginv(t(mat))
 
 ###declare design
 sdw    <- svydesign(id = ~ id, weights = ~ new_w, data = dat)
+
+file_name <- paste0("Discrimination for any reason/data/data_with_weights_", out, ".Rds")
+saveRDS(dat, file_name)
 
 #-------------------------------------------------------------------
 ###c.1.-  basic fit
