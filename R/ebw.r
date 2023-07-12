@@ -58,31 +58,33 @@ my_scale_rank <- function(covariates, target.margins) {
 find_weights <- function(id, covariates
                          , lambda = .1
                          #' initial set of weights, sampling weights
-                         , base.weights   = rep(1 / n, n)
+                         , base.weights = NULL
                          , target.margins = colMeans(X)
 ) {
+
   #https://web.stanford.edu/~boyd/papers/pdf/cvxr_paper.pdf
   #  see page 18  Kelly gambling
-  base.weights <- base.weights / sum(base.weights) #so weights add up to 1
   # covariates   <- covariates[base.weights > 0, ]
   # id           <- id[base.weights > 0]
   # base.weights <- base.weights[base.weights > 0]
-  
+
   n     <-  nrow(covariates)
   w     <-  Variable(n)
   x     <-  my_scale(covariates, target.margins)
-  
+  if (is.null(base.weights))
+    base.weights <- rep(1 / n, n)
+  base.weights <- base.weights / sum(base.weights) #so weights add up to 1
   objtive       <- Minimize(
     sum((t(x) %*% w)^2) +
       lambda * n * sum((w - base.weights)^2)
   )
-  
+
   constraints   <- list(w >= 0, sum(w) == 1)
-  
+
   problem       <- Problem(objtive, constraints = constraints)
-  
+
   result        <- solve(problem)
-  
+
   print(result$status)
   slw <- round(result$getValue(w), 4)
   return(data.frame(id = id, wb = slw))
