@@ -5,7 +5,7 @@ In the folder "Discrimination for any reason", you will find the data, programs,
 <b>Note that all files of this analysis are saved under the main folder "Discrimination for any reason" that has three subfolders: </b>
 
 #### <i>Discrimination for any reason/analyses</i> 
-In the analyses folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
+In this folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
   <li>1.rtree_outcomename will run the regression tree search.</li>
