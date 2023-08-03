@@ -21,7 +21,8 @@ You will find the analysis outputs (regression trees, statistical tests, etc.) f
 #### <i>Discrimination for any reason/data</i>
 You will find the datasets that can be used as input data for the R programs. 
 
-
+<br>
+<br>
 
 ## Analysis 2: Discrimination for race, ethnicity, and sexual orientation (n=841)
 In the three main folders below, you will find the data, programs, and output files for the analysis using the original sample who reported discrimination for specific reasons (race, ethnicity, and sexual orientation).
