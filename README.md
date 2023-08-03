@@ -4,7 +4,6 @@
 In the folder "Discrimination for any reason", you will find the data, programs, and output files for the analysis using the expanded sample who reported discrimination for any reason. 
 <b>Note that all files of this analysis are saved under the main folder "Discrimination for any reason" that has three subfolders: </b>
 
-<p style="margin-left:40px">
 #### <i>Discrimination for any reason/analyses</i> 
 In this folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
@@ -22,7 +21,6 @@ You will find the analysis outputs (regression trees, statistical tests, etc.) f
 #### <i>Discrimination for any reason/data</i>
 You will find the datasets that can be used as input data for the R programs. 
 
-</p>
 <br>
 
 ## Analysis 2: Discrimination for race, ethnicity, and sexual orientation (n=841)
