@@ -1,10 +1,10 @@
 # ADIA-Study-3
 
 ## Analysis 1: Discrimination for any reason (n=6281)
-In the folder "Discrimination for any reason", you will find the data, programs, and output files for the analysis using the sample who reported discrimination for any reason. 
-<b>Note that all files for this analysis are saved in the main folder "Discrimination for any reason"</b> that has three subfolders:
+In the folder "Discrimination for any reason", you will find the data, programs, and output files for the analysis using the expanded sample who reported discrimination for any reason. 
+<b>Note that all files of this analysis are saved under the main folder "Discrimination for any reason" that has three subfolders: </b>
 
-#### <i>analyses</i> 
+#### <i>Discrimination for any reason/analyses</i> 
 In the analyses folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
@@ -15,11 +15,12 @@ In the analyses folder, you will find R programs for each outcome. The programs 
   <li>5.contrast in vs out study will run the tests to compare the effects between the Study 1 and Study 3.</li>
 </ul> 
 
-#### <i>output</i> 
+#### <i>Discrimination for any reason/output</i> 
 You will find the analysis outputs (regression trees, statistical tests, etc.) for each outcome. 
 
-#### <i>data</i>
+#### <i>Discrimination for any reason/data</i>
 You will find the datasets that can be used as input data for the R programs. 
+
 
 
 ## Analysis 2: Discrimination for race, ethnicity, and sexual orientation (n=841)
