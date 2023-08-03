@@ -27,7 +27,7 @@ You will find the datasets that can be used as input data for the R programs.
 In the three main folders below, you will find the data, programs, and output files for the analysis using the original sample who reported discrimination for specific reasons (race, ethnicity, and sexual orientation).
 
 #### <i>analyses</i> 
-In the analyses folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
+In the folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
   <li>1.rtree_outcomename will run the regression tree search.</li>
