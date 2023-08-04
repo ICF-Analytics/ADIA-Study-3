@@ -16,12 +16,12 @@ In this folder, you will find R programs for each outcome. The programs should b
 </ul> 
 Subfolder names for each outcome are as follow: 
 <ul>
-  <li>accinju : Accidents or Injury </li>
-  <li>anxiety : Anxiety Symptom Severity </li>
-  <li>depress : Depressive Symptom Severity </li>
-  <li>drinkdy : Alcohol Consumption </li>
-  <li>evrvicr : Violent Crime Victimization </li>
-  <li>preshlth : General Health </li>
+  <li>accinju: Accidents or Injury </li>
+  <li>anxiety: Anxiety Symptom Severity </li>
+  <li>depress: Depressive Symptom Severity </li>
+  <li>drinkdy: Alcohol Consumption </li>
+  <li>evrvicr: Violent Crime Victimization </li>
+  <li>preshlth: General Health </li>
 </ul> 
 
 #### <i>Discrimination for any reason/output</i> 
