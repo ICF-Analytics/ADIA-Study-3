@@ -11,7 +11,7 @@ In this folder, you will find R programs for each outcome. The programs should b
   <li>1.rtree.R will run the regression tree search. Further information on the types of implemented regression trees can be found <a href="https://github.com/ICF-Analytics/ADIA_S13/files/9456975/Regression.tree.analysis.implementation.pdf">here</a>.</li>
   <li>2.inference.R will run the inference testing to confirm results.</li>
   <li>3.additional tests.R will run the group contrasts.</li>
-  <li>4.subgroup_analysis.R will run the tests to compare the effect for demogrphic subgroups.</li>
+  <li>4.subgroup_analysis.R will run the tests to compare the effect between demogrphic subgroups.</li>
   <li>5.contrast in vs out study.R will run the tests to compare the effects between the Study 1 and Study 3.</li>
 </ul> 
 Subfolder names for each outcome are as follow: 
@@ -25,7 +25,7 @@ Subfolder names for each outcome are as follow:
 </ul> 
 
 #### <i>Discrimination for any reason/output</i> 
-You will find the analysis outputs (regression trees, statistical tests, etc.) for each outcome. 
+You will find the analysis outputs (regression trees, statistical test results, etc.) for each outcome. 
 
 #### <i>Discrimination for any reason/data</i>
 You will find the datasets that can be used as input data for the R programs. 
@@ -39,13 +39,13 @@ In the three main folders below, you will find the data, programs, and output fi
 In the folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
-  <li>1.rtree will run the regression tree search.</li>
-  <li>2.inference will run the inference testing to confirm results.</li>
-  <li>3.additional tests will run the group contrasts.</li>
+  <li>1.rtree.R will run the regression tree search. Further information on the types of implemented regression trees can be found <a href="https://github.com/ICF-Analytics/ADIA_S13/files/9456975/Regression.tree.analysis.implementation.pdf">here</a>.</li>
+  <li>2.inference.R will run the inference testing to confirm results.</li>
+  <li>3.additional tests.R will run the group contrasts.</li>
 </ul> 
 
 #### <i>output</i> 
-You will find the analysis outputs (regression trees, statistical tests, etc.) for each outcome. 
+You will find the analysis outputs (regression trees, statistical test results, etc.) for each outcome. 
 
 #### <i>data</i>
 You will find the datasets that can be used as input data for the R programs. 
