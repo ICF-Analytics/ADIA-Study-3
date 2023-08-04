@@ -8,7 +8,7 @@ In the folder "Discrimination for any reason", you will find the data, programs,
 In this folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
-  <li>1.rtree.R will run the regression tree search. More information about types of regression tree can be found <a href="Regression.tree.analysis.implementation.pdf](https://github.com/ICF-Analytics/ADIA_S13/files/9456975/Regression.tree.analysis.implementation.pdf">here</a>.</p>></li>
+  <li>1.rtree.R will run the regression tree search. More information on the types of implemented regression trees can be found <a href="Regression.tree.analysis.implementation.pdf](https://github.com/ICF-Analytics/ADIA_S13/files/9456975/Regression.tree.analysis.implementation.pdf">here</a>.</li>
   <li>2.inference.R will run the inference testing to confirm results.</li>
   <li>3.additional tests.R will run the group contrasts.</li>
   <li>4.subgroup_analysis.R will run the tests to compare the effect for demogrphic subgroups.</li>
