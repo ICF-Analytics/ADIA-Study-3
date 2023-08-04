@@ -8,11 +8,20 @@ In the folder "Discrimination for any reason", you will find the data, programs,
 In this folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
-  <li>1.rtree_outcomename will run the regression tree search.</li>
-  <li>2.inference_outcomename will run the inference testing to confirm results.</li>
-  <li>3.additional tests_outcomename will run the group contrasts.</li>
+  <li>1.rtree will run the regression tree search.</li>
+  <li>2.inference will run the inference testing to confirm results.</li>
+  <li>3.additional tests will run the group contrasts.</li>
   <li>4.subgroup_analysis will run the tests to compare the effect for demogrphic subgroups.</li>
   <li>5.contrast in vs out study will run the tests to compare the effects between the Study 1 and Study 3.</li>
+</ul> 
+Subfolder names for each outcome are as follow: 
+<ul>
+  <li>accinju : Accidents or Injury </li>
+  <li>anxiety : Anxiety Symptom Severity </li>
+  <li>depress : Depressive Symptom Severity </li>
+  <li>drinkdy : Alcohol Consumption </li>
+  <li>evrvicr : Violent Crime Victimization </li>
+  <li>preshlth : General Health </li>
 </ul> 
 
 #### <i>Discrimination for any reason/output</i> 
@@ -30,9 +39,9 @@ In the three main folders below, you will find the data, programs, and output fi
 In the folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
-  <li>1.rtree_outcomename will run the regression tree search.</li>
-  <li>2.inference_outcomename will run the inference testing to confirm results.</li>
-  <li>3.additional tests_outcomename will run the group contrasts.</li>
+  <li>1.rtree will run the regression tree search.</li>
+  <li>2.inference will run the inference testing to confirm results.</li>
+  <li>3.additional tests will run the group contrasts.</li>
 </ul> 
 
 #### <i>output</i> 
