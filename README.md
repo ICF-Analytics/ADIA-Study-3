@@ -2,7 +2,7 @@
 
 ## Analysis 1: Discrimination for any reason (n=6281)
 In the folder "Discrimination for any reason", you will find the data, programs, and output files for the analysis using the expanded sample who reported discrimination for any reason. 
-<b>Please note that all files of this analysis are saved under the main folder "Discrimination for any reason" that has three subfolders: </b>
+<b>Please note that all files of this analysis are saved in the main folder "Discrimination for any reason" that has three subfolders: </b>
 
 #### <i>Discrimination for any reason/analyses</i> 
 In this folder, you will find R programs for each outcome. The programs were executed in the numbered order. <b>Please note: each time 0.preprocess_ALL is run it randomly selects new training and testing samples. Therefore, to replicate analysis, you must use data_for_regTree_08132023.rds file as an input data for 1.rtree.R programs. This data can be found Discrimination for any reason/Data folder. </b>
