@@ -5,14 +5,14 @@ In the folder "Discrimination for any reason", you will find the data, programs,
 <b>Note that all files of this analysis are saved under the main folder "Discrimination for any reason" that has three subfolders: </b>
 
 #### <i>Discrimination for any reason/analyses</i> 
-In this folder, you will find R programs for each outcome. The programs should be run in the numbered order: 
+In this folder, you will find R programs for each outcome. The programs were executed in the numbered order. <b>Please note: Each time 0.preprocess_ALL is run it randomly generates new training and testing samples. Therefore, to replicate analysis you must use our current data_for_regTree_08132023.rds file as an input data to 1.rtree.R programs. This data can be found Discrimination for any reason/Data folder. </b>
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
   <li>1.rtree.R will run the regression tree search. Further information on the types of implemented regression trees can be found <a href="https://github.com/ICF-Analytics/ADIA_S13/files/9456975/Regression.tree.analysis.implementation.pdf">here</a>.</li>
   <li>2.inference.R will run the inference testing to confirm results.</li>
   <li>3.additional tests.R will run the group contrasts.</li>
   <li>4.subgroup_analysis.R will run the tests to compare the effect between demogrphic subgroups.</li>
-  <li>5.contrast in vs out study.R will run the tests to compare the effects between the Study 1 and Study 3.</li>
+  <li>5.contrast in vs out study.R will run the tests to compare the effects between the Study 3 individuals and the remaining individuals.</li>
 </ul> 
 Subfolder names for each outcome are as follow: 
 <ul>
