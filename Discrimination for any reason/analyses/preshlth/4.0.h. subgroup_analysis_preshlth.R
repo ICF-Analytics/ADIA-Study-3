@@ -1,3 +1,5 @@
+## this tests the contrasts between Hispanic and non-Hispanic White in the causal model
+
 rm(list=ls(all=TRUE))
 library(tidyverse)
 library(survey)
