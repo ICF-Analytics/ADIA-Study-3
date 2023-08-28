@@ -15,7 +15,7 @@ In this folder, you will find R programs for each outcome. The programs were exe
   <ul class="square">
      <li style="margin-left:6em"> 4.0 subgroup_analysis.R tests the contrast between racial minority (non-White or Hispanic) and non-Hispanic White subgroups.</li>
      <li style="margin-left:6em"> 4.0.b subgroup_analysis.R tests the contrast between Black and non-Hispanic White subgroups.</li>
-     <li style="margin-left:6em"> 4.0.h subgroup_analysis.R tests the contrast between Hispanic andnon-Hispanic White subgroups.</li>
+     <li style="margin-left:6em"> 4.0.h subgroup_analysis.R tests the contrast between Hispanic and non-Hispanic White subgroups.</li>
   </ul>
   </li>
   <li>5.contrast in vs out study.R will run the tests to compare the strength of effects between the Study 3 sample and the remaining sample.</li>
