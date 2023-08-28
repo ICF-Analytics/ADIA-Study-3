@@ -6,6 +6,7 @@ In the folder "Discrimination for any reason", you will find the data, programs,
 
 #### <i>Discrimination for any reason/analyses</i> 
 In this folder, you will find R programs for each outcome. The programs were executed in the numbered order. The tests for contrast between subgroups (4.subgroup_analysis.R) and constrast between Study 3 sample and remaining sample (5.contrast in vs out study.R) were conducted for the outcomes that had significant nodes in the regression trees. These contrast tests were sometimes run separately for classical and causal trees if significant ACE and OCS were found in both trees. <br> 
+<br> 
 <b>Please note: each time 0.preprocess_ALL is run it randomly selects new training and testing samples. Therefore, to replicate analysis, you must use data_for_regTree_08132023.rds file as an input data for 1.rtree.R programs. This data can be found in Discrimination for any reason/Data folder. </b>
 <ul>
   <li>0.preprocess_ALL will prepare the analytic dataset by defining training and testing datasets.</li>
