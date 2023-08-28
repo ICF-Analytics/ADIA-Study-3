@@ -1,3 +1,6 @@
+
+## this tests the contrasts between individuals included in Study 3 and individuals excluded in Study 3 the causal model
+
 rm(list=ls(all=TRUE))
 library(tidyverse)
 library(survey)
