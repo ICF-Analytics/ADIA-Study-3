@@ -1,3 +1,6 @@
+
+## this tests the contrasts between individuals included and individuals excluded in Study 3 the classical model
+
 rm(list=ls(all=TRUE))
 library(tidyverse)
 library(survey)
