@@ -1,3 +1,6 @@
+
+## this tests the contrasts between racial minority and non-Hispanic White in the classical model
+
 rm(list=ls(all=TRUE))
 library(tidyverse)
 library(survey)
