@@ -12,9 +12,11 @@ In this folder, you will find R programs for each outcome. The programs were exe
   <li>2.inference.R will run the inference testing to confirm results.</li>
   <li>3.additional tests.R will run the group contrasts.</li>
   <li>4.subgroup_analysis.R will run the tests to compare the effect between demogrphic subgroups. The sugroup tests are broken into three R scripts:
+  <ul class="square">
      <li style="margin-left:6em"> 4.0 subgroup_analysis.R tests the contrast between racial minority (non-White or Hispanic) and non-Hispanic White subgroups.</li>
      <li style="margin-left:6em"> 4.0.b subgroup_analysis.R tests the contrast between Black and non-Hispanic White subgroups.</li>
      <li style="margin-left:6em"> 4.0.h subgroup_analysis.R tests the contrast between Hispanic andnon-Hispanic White subgroups.</li>
+  </ul>
   </li>
   <li>5.contrast in vs out study.R will run the tests to compare the strength of effects between the Study 3 sample and the remaining sample.</li>
 </ul> 
